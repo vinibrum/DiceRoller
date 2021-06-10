@@ -2,7 +2,9 @@ package com.devventure.diceroller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -10,21 +12,52 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val dado1 = findViewById<TextView>(R.id.textView)
-        val dado2 = findViewById<TextView>(R.id.textView2)
+        val dado1 = findViewById<ImageView>(R.id.dice1)
+        val dado2 = findViewById<ImageView>(R.id.dice2)
         val btn = findViewById<Button>(R.id.button)
 
-        dado1.text = gerarAleatorio().toString()
-        dado2.text = gerarAleatorio().toString()
+        val images = listOf(
+                R.drawable.dice_1,
+                R.drawable.dice_2,
+                R.drawable.dice_3,
+                R.drawable.dice_4,
+                R.drawable.dice_5,
+                R.drawable.dice_5,
+                R.drawable.dice_6)
 
         btn.setOnClickListener {
-            dado1.text = gerarAleatorio().toString()
-            dado2.text = gerarAleatorio().toString()
+            dado1.setImageResource(images.random())
+            dado2.setImageResource(images.random())
         }
-
+        Log.i("CICLO DE VIDA", "ON CREATE")
     }
 
-    fun gerarAleatorio() : Int {
+    override fun onStart() {
+        super.onStart()
+        Log.i("CICLO DE VIDA", "ON START")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("CICLO DE VIDA", "ON RESUME")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("CICLO DE VIDA", "ON PAUSE")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("CICLO DE VIDA", "ON STOP")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("CICLO DE VIDA", "ON DESTROY")
+    }
+
+    private fun getNumber() : Int {
         return (1..6).random()
     }
 }
