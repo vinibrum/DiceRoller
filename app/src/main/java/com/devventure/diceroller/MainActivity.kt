@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
         val dado1 = findViewById<ImageView>(R.id.dice1)
         val dado2 = findViewById<ImageView>(R.id.dice2)
         val btn = findViewById<Button>(R.id.button)
+
+        val text = findViewById<TextView>(R.id.goodLuckMessage)
+        val playerName = intent.getStringExtra("player_name")
+
+        //text.text = "${resources.getString(R.string.good_luck_message)}, $playerName!"
+        text.text = getString(R.string.good_luck_message, playerName)
 
         val images = listOf(
                 R.drawable.dice_1,
