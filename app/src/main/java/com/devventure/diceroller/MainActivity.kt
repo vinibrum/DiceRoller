@@ -1,11 +1,14 @@
 package com.devventure.diceroller
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val dado1 = findViewById<ImageView>(R.id.dice1)
         val dado2 = findViewById<ImageView>(R.id.dice2)
         val btn = findViewById<Button>(R.id.button)
+        val shareBttn = findViewById<FloatingActionButton>(R.id.shareBttn)
 
         val text = findViewById<TextView>(R.id.goodLuckMessage)
         val playerName = intent.getStringExtra("player_name")
@@ -35,6 +39,19 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
             dado1.setImageResource(images.random())
             dado2.setImageResource(images.random())
+        }
+
+        shareBttn.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.putExtra(Intent.EXTRA_TEXT, "You are lucky!")
+            intent.type = "text/plain"
+            intent.setPackage("com.whatsapp")
+
+            if(intent.resolveActivity(this.packageManager) != null) {
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Você não tem o WhatsApp instalado", Toast.LENGTH_LONG).show()
+            }
         }
         Log.i("CICLO DE VIDA", "ON CREATE")
     }
