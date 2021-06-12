@@ -16,7 +16,7 @@ Questões:
 
     Etapas:
 
-        1 -  Ao clicar no botão “Roll”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
+        1 - Ao clicar no botão “Roll”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
 
         2 - Troca dos números que representam a pontuação dos dados pela imagem dos dados.
 
