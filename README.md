@@ -10,13 +10,13 @@ Questões:
 
 2) Qual é a forma mais simples de resolver este problema?
 
-      R.: Ao clicar no botão “Jogar”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
+      R.: Ao clicar no botão “Roll”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
 
 3) Como dividir o trabalho de construir a app em etapas sem perder a solução do problema principal?
 
     Etapas:
 
-        1 -  Ao clicar no botão “Jogar”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
+        1 -  Ao clicar no botão “Roll”, gerar aleatoriamente dois números que simulam a pontuação dos dados.
 
         2 - Troca dos números que representam a pontuação dos dados pela imagem dos dados.
 
