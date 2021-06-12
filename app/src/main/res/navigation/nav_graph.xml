@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/nav_graph"
+    app:startDestination="@id/registerUserFragment2">
+
+    <fragment
+        android:id="@+id/registerUserFragment2"
+        android:name="com.devventure.diceroller.RegisterUserFragment"
+        android:label="RegisterUserFragment" >
+        <action
+            android:id="@+id/action_registerUserFragment2_to_rollDiceFragment2"
+            app:destination="@id/rollDiceFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rollDiceFragment2"
+        android:name="com.devventure.diceroller.RollDiceFragment"
+        android:label="RollDiceFragment" >
+        <argument
+            android:name="player_name"
+            app:argType="string"
+            android:defaultValue="Anonymous" />
+    </fragment>
+</navigation>

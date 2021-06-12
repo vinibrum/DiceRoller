@@ -32,7 +32,7 @@ class RollDiceFragment : Fragment() {
         val shareBttn = binding?.shareBttn
 
         val text = binding?.goodLuckMessage
-        val playerName = "playerName"
+        val playerName = arguments?.getString("playerName")
 
         //text.text = "${resources.getString(R.string.good_luck_message)}, $playerName!"
         text?.text = getString(R.string.good_luck_message, playerName)
