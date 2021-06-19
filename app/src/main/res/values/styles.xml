@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dice">
+        <item name="android:layout_height">@dimen/dice_height</item>
+        <item name="android:layout_width">@dimen/dice_width</item>
+    </style>
+
+    <style name="text_roll_dice">
+        <item name="android:textSize">@dimen/roll_dice_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dice_roller_title">
+        <item name="android:fontFamily">@font/mr_dafoe</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/dice_roller_title</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:layout_marginTop">@dimen/title_margin_top</item>
+    </style>
+
+    <style name="input_player_name">
+        <item name="android:layout_marginTop">@dimen/input_player_margin_top</item>
+        <item name="background">@drawable/text_input_box</item>
+        <item name="android:drawablePadding">@dimen/input_player_drawable_padding</item>
+        <item name="android:paddingStart">@dimen/input_player_padding</item>
+        <item name="android:paddingEnd">@dimen/input_player_padding</item>
+        <item name="android:textSize">@dimen/input_player_text_size</item>
+    </style>
+</resources>

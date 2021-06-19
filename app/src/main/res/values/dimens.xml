@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dice_height">130dp</dimen>
+    <dimen name="dice_width">130dp</dimen>
+    <dimen name="roll_dice_text_size">20sp</dimen>
+    <dimen name="title_size">50sp</dimen>
+    <dimen name="title_margin_top">30dp</dimen>
+    <dimen name="input_player_margin_top">200dp</dimen>
+    <dimen name="input_player_drawable_padding">12dp</dimen>
+    <dimen name="input_player_padding">20dp</dimen>
+    <dimen name="input_player_text_size">14sp</dimen>
+</resources>

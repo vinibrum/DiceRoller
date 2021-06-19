@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/dice1"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        style="@style/dice"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toStartOf="@+id/dice2"
         app:layout_constraintHorizontal_bias="0.542"
@@ -20,8 +20,7 @@
 
     <ImageView
         android:id="@+id/dice2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        style="@style/dice"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dice1"
@@ -34,9 +33,7 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:backgroundTint="@color/green_red_color_state"
         android:text="@string/roll_dice_btn_text"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -47,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        style="@style/text_roll_dice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -58,7 +56,6 @@
         android:id="@+id/shareBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/button"

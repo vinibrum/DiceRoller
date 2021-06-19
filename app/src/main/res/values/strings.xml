@@ -6,4 +6,5 @@
     <string name="start_bttn">Try your luck!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dice_roller_title">Dice Roller</string>
 </resources>
